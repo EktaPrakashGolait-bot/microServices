@@ -1,0 +1,23 @@
+{
+  "name": "micro",
+  "version": "1.0.0",
+  "private": true,
+  "main": "apiGateway-services",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently \"nodemon apiGateway/api-gateway.js\" \"nodemon user-services\" \"nodemon category-services\" \"nodemon product-services\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0",
+    "mongoose": "^8.18.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.3"
+  }
+}
